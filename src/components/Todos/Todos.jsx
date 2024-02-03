@@ -11,7 +11,7 @@ const Todos = ({ todos, setTodos }) => {
     e.preventDefault();
     if (value.trim() !== "") {
       setTodos([...todos, { id: todos.length + 1, task: value }]);
-      setValue(null);
+      setValue("");
     }
   };
 
@@ -28,6 +28,7 @@ const Todos = ({ todos, setTodos }) => {
           placeholder="Input Task"
           className="border-2 rounded p-2 w-[85%] outline-[#f37474]"
           onChange={inputChange}
+          value={value}
         />
         <button
           type="submit"
