@@ -1,0 +1,22 @@
+.myCheckbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 2px solid #000;
+  border-radius: 4px;
+  position: relative;
+}
+
+.myCheckbox:checked {
+  background-color: #f37474;
+  border: none;
+}
+
+.myCheckbox:checked::before {
+  content: "\2714";
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
